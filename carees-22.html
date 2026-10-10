@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>CAREES Vol.22｜EVENT GUIDE</title>
+
+<meta property="og:title" content="CAREES Vol.22">
+<meta property="og:description" content="開催概要・タイムテーブル・出番表">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/carees-22.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#FFFFFF;
+  --ink:#000000;
+  --mute:#767676;
+  --wash:#E9E9E6;
+  --signal:#F5E400;
+
+  --pad:20px;
+  --rule:3px;
+
+  --jp:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  --en:"Archivo Black","Zen Kaku Gothic New",sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:70px}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--jp);
+  line-height:1.7;
+  letter-spacing:.01em;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{color:inherit}
+button,input{font:inherit;color:inherit}
+
+:focus-visible{
+  outline:var(--rule) solid var(--ink);
+  outline-offset:3px;
+}
+
+.wrap{max-width:760px;margin:0 auto;padding:0 var(--pad)}
+
+/* ---------- header ---------- */
+
+.masthead{border-bottom:var(--rule) solid var(--ink);padding:14px 0 12px}
+.back{
+  font-family:var(--en);
+  font-size:18px;
+  letter-spacing:-.01em;
+  text-decoration:none;
+}
+.back::before{content:"‹ ";font-family:var(--jp);font-weight:900}
+
+/* ---------- event head ---------- */
+
+.head{padding:30px 0 40px;border-bottom:var(--rule) solid var(--ink)}
+
+.evt-name{
+  font-family:var(--en);
+  font-size:clamp(30px,8vw,46px);
+  line-height:1;
+  letter-spacing:-.02em;
+}
+.vol{
+  font-family:var(--en);
+  font-size:clamp(54px,15vw,92px);
+  line-height:.88;
+  letter-spacing:-.03em;
+  margin-top:4px;
+}
+.date{
+  font-family:var(--en);
+  font-size:clamp(24px,7vw,40px);
+  line-height:1.05;
+  margin-top:18px;
+}
+.date.unset{
+  font-family:var(--jp);
+  font-weight:900;
+  font-size:clamp(18px,4.6vw,24px);
+  color:var(--mute);
+}
+
+.facts{margin-top:20px;font-size:15px;line-height:1.9}
+.facts div{display:block}
+.facts dt{display:inline;font-weight:700;color:var(--mute);font-size:13px;margin-right:10px}
+.facts dd{display:inline}
+
+.flyer{
+  margin-top:26px;
+  background:var(--wash);
+  border:var(--rule) solid var(--ink);
+  min-height:160px;
+  display:flex;align-items:center;justify-content:center;
+}
+.flyer img{display:block;width:100%;height:auto}
+.flyer-empty{display:none;font-size:13px;color:var(--mute);padding:56px 20px;text-align:center}
+.flyer.is-empty .flyer-empty{display:block}
+
+@media (min-width:720px){
+  .head{display:grid;grid-template-columns:1fr 260px;gap:40px;align-items:start}
+  .flyer{margin-top:0}
+}
+
+/* ---------- section title ---------- */
+
+.sec-title{
+  font-family:var(--en);
+  font-size:clamp(26px,7vw,36px);
+  line-height:1;
+  letter-spacing:-.02em;
+  padding:34px 0 6px;
+}
+.sec-sub{font-size:12px;color:var(--mute);line-height:1.6}
+
+/* ---------- tools (sticky) ---------- */
+
+.tools{
+  position:sticky;top:0;z-index:5;
+  background:var(--paper);
+  border-bottom:var(--rule) solid var(--ink);
+  padding:12px 0;
+  margin-top:18px;
+}
+.jump{
+  display:flex;gap:8px;overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.jump::-webkit-scrollbar{display:none}
+.jump a{
+  flex:0 0 auto;
+  font-weight:900;font-size:13px;line-height:1;
+  text-decoration:none;
+  border:2px solid var(--ink);
+  padding:9px 12px;
+}
+.jump a:active{background:var(--signal)}
+
+.find{display:flex;gap:8px;margin-top:10px}
+.find input{
+  flex:1;min-width:0;
+  border:2px solid var(--ink);
+  border-radius:0;
+  padding:9px 12px;
+  font-size:16px;
+  background:var(--paper);
+  -webkit-appearance:none;
+}
+.find input::placeholder{color:var(--mute)}
+.find-count{
+  flex:0 0 auto;
+  align-self:center;
+  font-size:13px;font-weight:700;color:var(--mute);
+  min-width:3.5em;text-align:right;
+}
+
+/* ---------- status ---------- */
+
+.status{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  font-size:12px;color:var(--mute);
+  padding:12px 0 4px;
+}
+.status.warn{color:var(--ink)}
+.status.warn .status-text{background:var(--signal);padding:4px 8px;font-weight:700}
+.reload{
+  flex:0 0 auto;
+  background:none;border:none;
+  font-size:12px;font-weight:700;
+  text-decoration:underline;cursor:pointer;
+  padding:6px 0;
+}
+
+/* ---------- timetable ---------- */
+
+.tt{list-style:none;margin-top:6px}
+
+.blk{
+  display:grid;
+  grid-template-columns:78px 1fr;
+  gap:14px;
+  padding:16px 0;
+  border-top:1px solid var(--wash);
+}
+.blk:first-child{border-top:none}
+
+.blk-time{font-family:var(--en);font-size:17px;line-height:1.2}
+.blk-end{display:block;color:var(--mute);margin-top:2px}
+
+.blk-title{font-weight:900;font-size:16px;line-height:1.5}
+
+.blk.staff .blk-time,
+.blk.staff .blk-title{color:var(--mute)}
+.blk.staff .blk-title{font-weight:700}
+
+.blk.has-acts{
+  border-top:var(--rule) solid var(--ink);
+  padding-top:18px;
+}
+.blk.has-acts .blk-title{
+  font-size:clamp(18px,5vw,22px);
+  line-height:1.3;
+}
+
+.acts{list-style:none;margin-top:10px}
+.act{
+  display:flex;align-items:baseline;gap:12px;
+  padding:9px 0;
+  border-top:1px solid var(--wash);
+  font-size:15px;line-height:1.5;
+}
+.act:first-child{border-top:none}
+.act-no{
+  flex:0 0 1.8em;
+  font-family:var(--en);font-size:15px;
+  text-align:right;
+}
+.act-name{flex:1;min-width:0;overflow-wrap:anywhere}
+.badge{
+  flex:0 0 auto;
+  background:var(--ink);color:var(--paper);
+  font-weight:900;font-size:10px;line-height:1;letter-spacing:.04em;
+  padding:5px 7px;
+  align-self:center;
+}
+
+.act.hit{background:var(--signal);margin:0 -8px;padding-left:8px;padding-right:8px}
+
+/* ---------- empty / error ---------- */
+
+.msg{padding:36px 0;font-size:14px;color:var(--mute);line-height:1.8}
+.msg strong{color:var(--ink);display:block;font-size:15px;margin-bottom:6px}
+
+/* ---------- footer ---------- */
+
+.foot{
+  margin-top:40px;
+  border-top:var(--rule) solid var(--ink);
+  padding:22px 0 56px;
+  font-size:12px;color:var(--mute);line-height:1.9;
+}
+</style>
+</head>
+
+<body>
+
+<header class="masthead">
+  <div class="wrap"><a class="back" href="index.html" id="backLink">EVENT GUIDE</a></div>
+</header>
+
+<main class="wrap">
+  <section class="head" id="head"></section>
+
+  <section id="ttSection">
+    <h2 class="sec-title">TIME TABLE</h2>
+    <p class="sec-sub" id="secSub">出番の順番は当日変更になる場合があります。直前にもう一度確認してください。</p>
+
+    <div class="tools">
+      <nav class="jump" id="jump" aria-label="部に移動"></nav>
+      <div class="find">
+        <input id="findInput" type="search" placeholder="チーム名で探す" autocomplete="off" enterkeyhint="search">
+        <span class="find-count" id="findCount"></span>
+      </div>
+    </div>
+
+    <div class="status" id="status">
+      <span class="status-text" id="statusText">読み込み中です</span>
+      <button class="reload" id="reloadBtn" type="button">最新にする</button>
+    </div>
+
+    <ol class="tt" id="tt"></ol>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">お問い合わせは運営までご連絡ください。</div>
+</footer>
+
+<script>
+/* ============================================================
+   過去回（開催当日の記録を固定表示）
+   ============================================================ */
+
+/* 1. データの取得先（次回開催のページだけ使います。過去回は空 "" のまま） */
+const API_URL = "";
+
+/* 2. このページのイベント情報（index.html の EVENTS と揃えてください）
+      guests : フライヤーに載せたゲスト名。無ければ [] */
+const EVENT = {
+  "name": "CAREES",
+  "vol": 22,
+  "date": "2025.11.23",
+  "day": "SUN",
+  "venue": "京橋 BERONICA",
+  "open": "15:00",
+  "close": "22:00",
+  "price": "一般 ¥3,500／中高生 ¥2,500（各1ドリンク付）／小学生未満 無料",
+  "guests": [],
+  "flyer": "images/carees-22.jpg"
+};
+
+const SITE_TITLE = "EVENT GUIDE";
+
+/* 3. 過去回の記録（タイムテーブル・出番表）
+      ここに書いた内容は固定され、スプレッドシートを書き換えても変わりません。
+      記録が無い回は null にすると、タイムテーブル欄ごと非表示になります。 */
+const ARCHIVE = {
+ "blocks": [
+  {
+   "block_id": "b01",
+   "start": "10:30",
+   "end": "",
+   "title": "スタッフ集合",
+   "show": "staff"
+  },
+  {
+   "block_id": "b02",
+   "start": "11:00",
+   "end": "",
+   "title": "リハーサル参加希望チーム集合（受付）",
+   "show": "staff"
+  },
+  {
+   "block_id": "b03",
+   "start": "11:00",
+   "end": "14:00",
+   "title": "リハーサル（各チーム 2分30秒）",
+   "show": "staff"
+  },
+  {
+   "block_id": "b04",
+   "start": "14:00",
+   "end": "14:30",
+   "title": "時間調整",
+   "show": "staff"
+  },
+  {
+   "block_id": "b05",
+   "start": "14:30",
+   "end": "15:00",
+   "title": "OPEN",
+   "show": "all"
+  },
+  {
+   "block_id": "b06",
+   "start": "15:00",
+   "end": "16:05",
+   "title": "第1部 SHOW CASE",
+   "show": "all"
+  },
+  {
+   "block_id": "b07",
+   "start": "16:05",
+   "end": "16:25",
+   "title": "DJ TIME",
+   "show": "all"
+  },
+  {
+   "block_id": "b08",
+   "start": "16:25",
+   "end": "17:30",
+   "title": "第2部 SHOW CASE",
+   "show": "all"
+  },
+  {
+   "block_id": "b09",
+   "start": "17:30",
+   "end": "18:00",
+   "title": "DJ TIME",
+   "show": "all"
+  },
+  {
+   "block_id": "b10",
+   "start": "18:00",
+   "end": "19:20",
+   "title": "第3部 SHOW CASE",
+   "show": "all"
+  },
+  {
+   "block_id": "b11",
+   "start": "19:20",
+   "end": "19:40",
+   "title": "DJ TIME",
+   "show": "all"
+  },
+  {
+   "block_id": "b12",
+   "start": "19:40",
+   "end": "20:50",
+   "title": "第4部 SHOW CASE",
+   "show": "all"
+  },
+  {
+   "block_id": "b13",
+   "start": "20:50",
+   "end": "22:00",
+   "title": "DJ TIME ＆ 撤収作業",
+   "show": "all"
+  },
+  {
+   "block_id": "b14",
+   "start": "22:00",
+   "end": "",
+   "title": "CLOSE",
+   "show": "all"
+  }
+ ],
+ "acts": [
+  {
+   "block_id": "b06",
+   "order": "1",
+   "name": "ユウキLOCK",
+   "guest": ""
+  },
+  {
+   "block_id": "b06",
+   "order": "2",
+   "name": "Flare",
+   "guest": ""
+  },
+  {
+   "block_id": "b06",
+   "order": "3",
+   "name": "K-69.",
+   "guest": ""
+  },
+  {
+   "block_id": "b06",
+   "order": "4",
+   "name": "ke-ta FreeStyle",
+   "guest": ""
+  },
+  {
+   "block_id": "b06",
+   "order": "5",
+   "name": "So.Frasores",
+   "guest": ""
+  },
+  {
+   "block_id": "b06",
+   "order": "6",
+   "name": "Liberaster",
+   "guest": ""
+  },
+  {
+   "block_id": "b06",
+   "order": "7",
+   "name": "ANN",
+   "guest": ""
+  },
+  {
+   "block_id": "b06",
+   "order": "8",
+   "name": "ピムミー",
+   "guest": ""
+  },
+  {
+   "block_id": "b06",
+   "order": "9",
+   "name": "natsuki BREAK",
+   "guest": ""
+  },
+  {
+   "block_id": "b06",
+   "order": "10",
+   "name": "Daisy",
+   "guest": ""
+  },
+  {
+   "block_id": "b06",
+   "order": "11",
+   "name": "MusKeTeers",
+   "guest": ""
+  },
+  {
+   "block_id": "b06",
+   "order": "12",
+   "name": "SHUMACK",
+   "guest": ""
+  },
+  {
+   "block_id": "b06",
+   "order": "13",
+   "name": "media",
+   "guest": ""
+  },
+  {
+   "block_id": "b06",
+   "order": "14",
+   "name": "マルゲリータ",
+   "guest": ""
+  },
+  {
+   "block_id": "b06",
+   "order": "15",
+   "name": "EMI JAZZナンバー",
+   "guest": ""
+  },
+  {
+   "block_id": "b06",
+   "order": "16",
+   "name": "MAYA crew",
+   "guest": ""
+  },
+  {
+   "block_id": "b08",
+   "order": "1",
+   "name": "69.CRISIS",
+   "guest": ""
+  },
+  {
+   "block_id": "b08",
+   "order": "2",
+   "name": "ReALm",
+   "guest": ""
+  },
+  {
+   "block_id": "b08",
+   "order": "3",
+   "name": "A・ne・mo・ne",
+   "guest": ""
+  },
+  {
+   "block_id": "b08",
+   "order": "4",
+   "name": "わさビーフ",
+   "guest": ""
+  },
+  {
+   "block_id": "b08",
+   "order": "5",
+   "name": "NIJO",
+   "guest": ""
+  },
+  {
+   "block_id": "b08",
+   "order": "6",
+   "name": "Lil.Feel",
+   "guest": ""
+  },
+  {
+   "block_id": "b08",
+   "order": "7",
+   "name": "EMIキッズHIPHOP",
+   "guest": ""
+  },
+  {
+   "block_id": "b08",
+   "order": "8",
+   "name": "Go Glow Girl",
+   "guest": ""
+  },
+  {
+   "block_id": "b08",
+   "order": "9",
+   "name": "Great Madams",
+   "guest": ""
+  },
+  {
+   "block_id": "b08",
+   "order": "10",
+   "name": "FJぱるぷんてふぁいアー",
+   "guest": ""
+  },
+  {
+   "block_id": "b08",
+   "order": "11",
+   "name": "イーガーリャンテイ",
+   "guest": ""
+  },
+  {
+   "block_id": "b08",
+   "order": "12",
+   "name": "Mahalo",
+   "guest": ""
+  },
+  {
+   "block_id": "b08",
+   "order": "13",
+   "name": "hot club",
+   "guest": ""
+  },
+  {
+   "block_id": "b08",
+   "order": "14",
+   "name": "EMI ジュニアHIPHOP初級&中級",
+   "guest": ""
+  },
+  {
+   "block_id": "b08",
+   "order": "15",
+   "name": "Y's.A",
+   "guest": ""
+  },
+  {
+   "block_id": "b08",
+   "order": "16",
+   "name": "r2km2",
+   "guest": ""
+  },
+  {
+   "block_id": "b08",
+   "order": "17",
+   "name": "Aimer. Feel",
+   "guest": ""
+  },
+  {
+   "block_id": "b10",
+   "order": "1",
+   "name": "ジーン",
+   "guest": ""
+  },
+  {
+   "block_id": "b10",
+   "order": "2",
+   "name": "カムロン",
+   "guest": ""
+  },
+  {
+   "block_id": "b10",
+   "order": "3",
+   "name": "Y.N.S.",
+   "guest": ""
+  },
+  {
+   "block_id": "b10",
+   "order": "4",
+   "name": "霸儒羅",
+   "guest": ""
+  },
+  {
+   "block_id": "b10",
+   "order": "5",
+   "name": "CARMINE",
+   "guest": ""
+  },
+  {
+   "block_id": "b10",
+   "order": "6",
+   "name": "Rei＋Fellow",
+   "guest": ""
+  },
+  {
+   "block_id": "b10",
+   "order": "7",
+   "name": "mischief",
+   "guest": ""
+  },
+  {
+   "block_id": "b10",
+   "order": "8",
+   "name": "Naomi",
+   "guest": ""
+  },
+  {
+   "block_id": "b10",
+   "order": "9",
+   "name": "million",
+   "guest": ""
+  },
+  {
+   "block_id": "b10",
+   "order": "10",
+   "name": "伸's next",
+   "guest": ""
+  },
+  {
+   "block_id": "b10",
+   "order": "11",
+   "name": "シュガバニ",
+   "guest": ""
+  },
+  {
+   "block_id": "b10",
+   "order": "12",
+   "name": "P.P 802",
+   "guest": ""
+  },
+  {
+   "block_id": "b10",
+   "order": "13",
+   "name": "あみちゃんのスーパーらぶりすてぃっくエクスピアリドーシャっす",
+   "guest": ""
+  },
+  {
+   "block_id": "b10",
+   "order": "14",
+   "name": "mischievous",
+   "guest": ""
+  },
+  {
+   "block_id": "b10",
+   "order": "15",
+   "name": "Femme Fatale",
+   "guest": ""
+  },
+  {
+   "block_id": "b10",
+   "order": "16",
+   "name": "近畿フリチャチャ愛好会",
+   "guest": ""
+  },
+  {
+   "block_id": "b10",
+   "order": "17",
+   "name": "Gut Feelin' The Lovers",
+   "guest": "GUEST DANCER"
+  },
+  {
+   "block_id": "b12",
+   "order": "1",
+   "name": "coloris",
+   "guest": ""
+  },
+  {
+   "block_id": "b12",
+   "order": "2",
+   "name": "SISOJI",
+   "guest": ""
+  },
+  {
+   "block_id": "b12",
+   "order": "3",
+   "name": "OJI-LOCK",
+   "guest": ""
+  },
+  {
+   "block_id": "b12",
+   "order": "4",
+   "name": "シャっすドンナ",
+   "guest": ""
+  },
+  {
+   "block_id": "b12",
+   "order": "5",
+   "name": "Glow Up",
+   "guest": ""
+  },
+  {
+   "block_id": "b12",
+   "order": "6",
+   "name": "stay soul",
+   "guest": ""
+  },
+  {
+   "block_id": "b12",
+   "order": "7",
+   "name": "MAM.",
+   "guest": ""
+  },
+  {
+   "block_id": "b12",
+   "order": "8",
+   "name": "百花繚乱・アバター合同チーム",
+   "guest": ""
+  },
+  {
+   "block_id": "b12",
+   "order": "9",
+   "name": "両手に華",
+   "guest": ""
+  },
+  {
+   "block_id": "b12",
+   "order": "10",
+   "name": "つよめん",
+   "guest": ""
+  },
+  {
+   "block_id": "b12",
+   "order": "11",
+   "name": "出MASU。",
+   "guest": ""
+  },
+  {
+   "block_id": "b12",
+   "order": "12",
+   "name": "malum",
+   "guest": ""
+  },
+  {
+   "block_id": "b12",
+   "order": "13",
+   "name": "Alabaster",
+   "guest": "GUEST DANCER"
+  },
+  {
+   "block_id": "b12",
+   "order": "14",
+   "name": "TOMOYA",
+   "guest": "GUEST DANCER"
+  }
+ ]
+};
+
+/* ============================================================
+   ここから下は編集不要です。
+   ============================================================ */
+
+const CACHE_KEY = "evt-cache-" + EVENT.name + "-" + EVENT.vol;
+const TIMEOUT_MS = 8000;
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => (
+  {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]
+));
+const norm = s => String(s || "").normalize("NFKC").toLowerCase().replace(/\s+/g, "");
+
+/* ---------- head ---------- */
+
+function renderHead(){
+  $("backLink").textContent = SITE_TITLE;
+
+  const hasDate = EVENT.date !== "";
+  const facts = [
+    ["会場", EVENT.venue],
+    ["時間", EVENT.open && EVENT.close ? `${EVENT.open} 〜 ${EVENT.close}` : ""],
+    ["料金", EVENT.price],
+    ["GUEST", (EVENT.guests || []).join(" / ")]
+  ].filter(([,v]) => v)
+   .map(([k,v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
+
+  const heading = EVENT.vol
+    ? `<div class="evt-name">${esc(EVENT.name)}</div><div class="vol">Vol.${esc(EVENT.vol)}</div>`
+    : `<div class="vol">${esc(EVENT.name)}</div>`;
+
+  $("head").innerHTML = `
+    <div>
+      ${heading}
+      <div class="date ${hasDate ? "" : "unset"}">
+        ${hasDate ? esc(EVENT.date) + (EVENT.day ? " " + esc(EVENT.day) : "") : "日程が決まり次第、掲載します"}
+      </div>
+      <dl class="facts">${facts}</dl>
+    </div>
+    <div class="flyer" id="flyer">
+      <img src="${esc(EVENT.flyer)}" alt="${esc(EVENT.name)} Vol.${esc(EVENT.vol)} フライヤー">
+      <p class="flyer-empty">フライヤーは準備中です</p>
+    </div>`;
+
+  const img = $("flyer").querySelector("img");
+  const fail = () => { img.style.display = "none"; $("flyer").classList.add("is-empty"); };
+  img.addEventListener("error", fail);
+  if (img.complete && img.naturalWidth === 0) fail();
+}
+
+/* ---------- data ---------- */
+
+function fetchJson(){
+  const ctrl = new AbortController();
+  const t = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
+  return fetch(API_URL, { signal: ctrl.signal, cache: "no-store" })
+    .then(r => r.json())
+    .finally(() => clearTimeout(t));
+}
+
+function fetchJsonp(){
+  return new Promise((resolve, reject) => {
+    const cb = "__evt" + Date.now();
+    const s = document.createElement("script");
+    const t = setTimeout(() => { cleanup(); reject(new Error("timeout")); }, TIMEOUT_MS);
+    function cleanup(){ clearTimeout(t); delete window[cb]; s.remove(); }
+    window[cb] = data => { cleanup(); resolve(data); };
+    s.onerror = () => { cleanup(); reject(new Error("jsonp")); };
+    s.src = API_URL + (API_URL.includes("?") ? "&" : "?") + "callback=" + cb;
+    document.head.appendChild(s);
+  });
+}
+
+function readCache(){
+  try { return JSON.parse(localStorage.getItem(CACHE_KEY)); } catch(e){ return null; }
+}
+function writeCache(data){
+  try { localStorage.setItem(CACHE_KEY, JSON.stringify(data)); } catch(e){}
+}
+
+let loading = false;
+
+async function load(){
+  if (loading) return;
+  loading = true;
+  setStatus("読み込み中です", false);
+
+  let data = null;
+  try { data = await fetchJson(); }
+  catch(e){ try { data = await fetchJsonp(); } catch(e2){} }
+
+  if (data && data.ok){
+    writeCache(data);
+    renderTable(data);
+    setStatus(`最終更新 ${data.updated}`, false);
+  } else {
+    const cached = readCache();
+    if (cached){
+      renderTable(cached);
+      setStatus(`通信できないため、${cached.updated} 時点の内容を表示しています`, true);
+    } else {
+      $("tt").innerHTML = `
+        <li class="msg">
+          <strong>タイムテーブルを読み込めませんでした</strong>
+          電波の良い場所で「最新にする」を押してください。
+        </li>`;
+      $("jump").innerHTML = "";
+      setStatus("読み込めませんでした", true);
+    }
+  }
+  loading = false;
+}
+
+function setStatus(text, warn){
+  $("statusText").textContent = text;
+  $("status").classList.toggle("warn", warn);
+}
+
+/* ---------- timetable ---------- */
+
+function renderTable(data){
+  const blocks = data.blocks || [];
+  const acts = data.acts || [];
+
+  const byBlock = {};
+  acts.forEach(a => { (byBlock[a.block_id] = byBlock[a.block_id] || []).push(a); });
+  Object.values(byBlock).forEach(list =>
+    list.sort((x, y) => (parseFloat(x.order) || 0) - (parseFloat(y.order) || 0))
+  );
+
+  if (blocks.length === 0){
+    $("tt").innerHTML = `<li class="msg"><strong>タイムテーブルは準備中です</strong>決まり次第ここに掲載します。</li>`;
+    $("jump").innerHTML = "";
+    return;
+  }
+
+  $("tt").innerHTML = blocks.map(b => {
+    const list = byBlock[b.block_id] || [];
+    const time = `${esc(b.start)}${b.end ? `<span class="blk-end">〜${esc(b.end)}</span>` : ""}`;
+    const actsHtml = list.length ? `
+      <ol class="acts">
+        ${list.map((a, i) => `
+          <li class="act" data-name="${esc(norm(a.name))}">
+            <span class="act-no">${i + 1}</span>
+            <span class="act-name">${esc(a.name)}</span>
+            ${a.guest ? `<span class="badge">${esc(a.guest)}</span>` : ""}
+          </li>`).join("")}
+      </ol>` : "";
+    const cls = ["blk", b.show === "staff" ? "staff" : "", list.length ? "has-acts" : ""].join(" ");
+    return `
+      <li class="${cls}" id="${esc(b.block_id)}">
+        <div class="blk-time">${time}</div>
+        <div class="blk-body">
+          <div class="blk-title">${esc(b.title)}</div>
+          ${actsHtml}
+        </div>
+      </li>`;
+  }).join("");
+
+  $("jump").innerHTML = blocks
+    .filter(b => (byBlock[b.block_id] || []).length)
+    .map(b => `<a href="#${esc(b.block_id)}">${esc(String(b.title).split(/\s/)[0])}</a>`)
+    .join("");
+
+  applyFind(false);
+}
+
+/* ---------- find ---------- */
+
+let findTimer = null;
+
+function applyFind(scroll){
+  const q = norm($("findInput").value);
+  const rows = document.querySelectorAll(".act");
+  let first = null, n = 0;
+
+  rows.forEach(r => {
+    const hit = q !== "" && r.dataset.name.includes(q);
+    r.classList.toggle("hit", hit);
+    if (hit){ n++; if (!first) first = r; }
+  });
+
+  $("findCount").textContent = q === "" ? "" : `${n}件`;
+  if (scroll && first) first.scrollIntoView({ block: "center", behavior: "smooth" });
+}
+
+$("findInput").addEventListener("input", () => {
+  clearTimeout(findTimer);
+  findTimer = setTimeout(() => applyFind(true), 250);
+});
+$("findInput").addEventListener("keydown", e => {
+  if (e.key === "Enter"){ e.preventDefault(); applyFind(true); e.target.blur(); }
+});
+
+/* ---------- boot ---------- */
+
+renderHead();
+
+if (ARCHIVE){
+  /* 過去回：ページに書き込んだ記録を表示する */
+  $("secSub").textContent = "開催当日の記録です。";
+  $("reloadBtn").style.display = "none";
+  renderTable(ARCHIVE);
+  setStatus((EVENT.date ? EVENT.date + " " : "") + "開催時の内容", false);
+} else if (API_URL){
+  /* 次回開催：スプレッドシートから最新を読む */
+  $("reloadBtn").addEventListener("click", load);
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") load();
+  });
+  const cachedFirst = readCache();
+  if (cachedFirst) renderTable(cachedFirst);
+  load();
+} else {
+  /* タイムテーブルの記録が無い回 */
+  $("ttSection").style.display = "none";
+  $("head").style.borderBottom = "none";
+}
+</script>
+
+</body>
+</html>

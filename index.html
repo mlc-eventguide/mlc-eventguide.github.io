@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>EVENT GUIDE</title>
+
+<meta property="og:title" content="EVENT GUIDE">
+<meta property="og:description" content="開催日・タイムテーブル・出演者の確認ページ">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/ogp.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#FFFFFF;
+  --ink:#000000;
+  --mute:#767676;
+  --wash:#E9E9E6;
+  --signal:#F5E400;
+
+  --pad:20px;
+  --rule:3px;
+
+  --jp:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  --en:"Archivo Black","Zen Kaku Gothic New",sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{-webkit-text-size-adjust:100%}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--jp);
+  font-weight:400;
+  line-height:1.7;
+  letter-spacing:.01em;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{color:inherit}
+
+:focus-visible{
+  outline:var(--rule) solid var(--ink);
+  outline-offset:3px;
+  background:var(--signal);
+}
+
+.wrap{
+  max-width:760px;
+  margin:0 auto;
+  padding:0 var(--pad);
+}
+
+/* ---------- header ---------- */
+
+.masthead{
+  border-bottom:var(--rule) solid var(--ink);
+  padding:18px 0 14px;
+}
+
+.mark{
+  font-family:var(--en);
+  font-size:clamp(26px,7.5vw,38px);
+  line-height:.95;
+  letter-spacing:-.02em;
+}
+
+.mark-sub{
+  font-size:12px;
+  color:var(--mute);
+  line-height:1.6;
+  margin-top:8px;
+}
+
+/* ---------- next event ---------- */
+
+.next{
+  padding:34px 0 44px;
+  border-bottom:var(--rule) solid var(--ink);
+}
+
+.tag{
+  display:inline-block;
+  background:var(--signal);
+  color:var(--ink);
+  font-weight:900;
+  font-size:13px;
+  line-height:1;
+  padding:9px 14px;
+  margin-bottom:22px;
+}
+
+.tag.tbd{
+  background:var(--wash);
+  color:var(--mute);
+}
+
+.evt-name{
+  font-family:var(--en);
+  font-size:clamp(30px,8vw,46px);
+  line-height:1;
+  letter-spacing:-.02em;
+}
+
+.vol{
+  font-family:var(--en);
+  font-size:clamp(54px,15vw,92px);
+  line-height:.88;
+  letter-spacing:-.03em;
+  margin-top:4px;
+}
+
+.evt-name.solo{
+  font-size:clamp(48px,13vw,84px);
+  line-height:.9;
+  letter-spacing:-.03em;
+}
+
+.date{
+  font-family:var(--en);
+  font-size:clamp(24px,7vw,40px);
+  line-height:1.05;
+  letter-spacing:-.01em;
+  margin-top:18px;
+}
+
+.date.unset{
+  font-family:var(--jp);
+  font-weight:900;
+  font-size:clamp(18px,4.6vw,24px);
+  color:var(--mute);
+}
+
+.facts{
+  margin-top:20px;
+  font-size:15px;
+  line-height:1.9;
+}
+
+.facts dt{
+  display:inline;
+  font-weight:700;
+  color:var(--mute);
+  font-size:13px;
+  margin-right:10px;
+}
+
+.facts dd{display:inline}
+.facts div{display:block}
+
+/* ---------- flyer ---------- */
+
+.flyer{
+  margin-top:26px;
+  background:var(--wash);
+  border:var(--rule) solid var(--ink);
+  min-height:180px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.flyer img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+.flyer-empty{
+  display:none;
+  font-size:13px;
+  color:var(--mute);
+  padding:60px 20px;
+  text-align:center;
+}
+
+.flyer.is-empty .flyer-empty{display:block}
+
+/* ---------- action ---------- */
+
+.action{
+  display:block;
+  margin-top:26px;
+  background:var(--ink);
+  color:var(--paper);
+  font-weight:900;
+  font-size:16px;
+  text-align:center;
+  text-decoration:none;
+  padding:20px;
+}
+
+.action:active{background:var(--signal);color:var(--ink)}
+
+.action.off{
+  background:var(--paper);
+  color:var(--mute);
+  border:var(--rule) solid var(--wash);
+  font-weight:700;
+}
+
+/* ---------- archive ---------- */
+
+.archive{padding:34px 0 0}
+
+.archive h2{
+  font-size:15px;
+  font-weight:900;
+  letter-spacing:.04em;
+  margin-bottom:18px;
+}
+
+.past{
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+  text-decoration:none;
+  padding:18px 0;
+  border-top:1px solid var(--wash);
+}
+
+.past:first-of-type{border-top:none}
+
+.past-thumb{
+  flex:0 0 68px;
+  aspect-ratio:3/4;
+  background:var(--wash);
+  border:2px solid var(--ink);
+  overflow:hidden;
+}
+
+.past-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+
+.past-title{
+  font-family:var(--en);
+  font-size:22px;
+  line-height:1.1;
+  letter-spacing:-.02em;
+}
+
+.past-meta{
+  font-size:13px;
+  color:var(--mute);
+  margin-top:7px;
+  line-height:1.6;
+}
+
+.empty{
+  font-size:14px;
+  color:var(--mute);
+  padding:8px 0 4px;
+}
+
+/* ---------- footer ---------- */
+
+.foot{
+  margin-top:40px;
+  border-top:var(--rule) solid var(--ink);
+  padding:22px 0 56px;
+  font-size:12px;
+  color:var(--mute);
+  line-height:1.9;
+}
+
+/* ---------- wide ---------- */
+
+@media (min-width:720px){
+  .next{display:grid;grid-template-columns:1fr 280px;gap:40px;align-items:start}
+  .next-head{grid-column:1}
+  .next-side{grid-column:2;grid-row:1 / span 2}
+  .flyer{margin-top:0}
+}
+</style>
+</head>
+
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="mark" id="siteTitle"></div>
+    <p class="mark-sub" id="siteLead"></p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="next" id="next"></section>
+  <section class="archive">
+    <h2>これまでの開催</h2>
+    <div id="archive"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap" id="siteFoot"></div>
+</footer>
+
+<script>
+/* ============================================================
+   1. サイト名まわり
+   ここのテキストを書き換えれば、ページ上部と下部が変わります。
+   （<title> と og:title は <head> 側にもあるので、
+     本決まりになったらそちらも同じ文言に揃えてください）
+   ============================================================ */
+
+const SITE = {
+  title: "EVENT GUIDE",
+  lead:  "出演者・来場者向けの情報ページです。<br>開催日・タイムテーブル・出番表はこちらで確認できます。",
+  foot:  "お問い合わせは運営までご連絡ください。"
+};
+
+/* ============================================================
+   2. イベント一覧
+   新しい回を追加するときは、配列の先頭に1ブロック足してください。
+
+   name   : イベント名（例 "CAREES"）
+   vol    : 回数。単発イベントで回数が無いときは null
+   status : "upcoming"（次回開催） / "past"（過去回）
+   date   : "2026.11.22" の形式。未定なら空 "" にする
+   ready  : 詳細ページが公開済みなら true、まだなら false
+   ============================================================ */
+
+const EVENTS = [
+  {
+    name: "CAREES",
+    vol: 23,
+    status: "upcoming",
+    date: "",
+    day: "",
+    venue: "京橋 BERONICA",
+    open: "15:00",
+    close: "22:00",
+    price: "",
+    flyer: "images/carees-23.jpg",
+    page: "carees-23.html",
+    ready: false
+  },
+  {
+    name: "CAREES",
+    vol: 22,
+    status: "past",
+    date: "2025.11.23",
+    day: "SUN",
+    venue: "京橋 BERONICA",
+    open: "15:00",
+    close: "22:00",
+    price: "一般 ¥3,500 ほか",
+    flyer: "images/carees-22.jpg",
+    page: "carees-22.html",
+    ready: true
+  },
+  {
+    name: "CAREES",
+    vol: 21,
+    status: "past",
+    date: "2024.11.24",
+    day: "SUN",
+    venue: "京橋 BERONICA",
+    open: "15:00",
+    close: "22:00",
+    price: "",
+    flyer: "images/carees-21.jpg",
+    page: "carees-21.html",
+    ready: true
+  }
+];
+
+/* ============================================================
+   ここから下は編集不要です。
+   ============================================================ */
+
+const esc = s => String(s).replace(/[&<>"]/g, c => (
+  {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]
+));
+
+const titleOf = ev => ev.vol ? `${ev.name} Vol.${ev.vol}` : ev.name;
+
+function renderSite(){
+  document.getElementById("siteTitle").textContent = SITE.title;
+  document.getElementById("siteLead").innerHTML = SITE.lead;
+  document.getElementById("siteFoot").innerHTML =
+    esc(SITE.title) + "<br>" + SITE.foot;
+}
+
+function flyerBlock(ev){
+  return `
+    <div class="flyer" data-flyer>
+      <img src="${esc(ev.flyer)}" alt="${esc(titleOf(ev))} フライヤー">
+      <p class="flyer-empty">フライヤーは準備中です</p>
+    </div>`;
+}
+
+function renderNext(){
+  const ev = EVENTS.find(e => e.status === "upcoming");
+  const host = document.getElementById("next");
+  if(!ev){ host.style.display = "none"; return; }
+
+  const hasDate = ev.date !== "";
+
+  const facts = [
+    ["会場", ev.venue],
+    ["時間", ev.open && ev.close ? `${ev.open} 〜 ${ev.close}` : ""],
+    ["料金", ev.price]
+  ].filter(([,v]) => v)
+   .map(([k,v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`)
+   .join("");
+
+  const heading = ev.vol
+    ? `<div class="evt-name">${esc(ev.name)}</div>
+       <div class="vol">Vol.${esc(ev.vol)}</div>`
+    : `<div class="evt-name solo">${esc(ev.name)}</div>`;
+
+  host.innerHTML = `
+    <div class="next-head">
+      <span class="tag ${hasDate ? "" : "tbd"}">${hasDate ? "次回開催" : "次回開催 準備中"}</span>
+      ${heading}
+      <div class="date ${hasDate ? "" : "unset"}">
+        ${hasDate ? esc(ev.date) + (ev.day ? " " + esc(ev.day) : "") : "日程が決まり次第、ここに掲載します"}
+      </div>
+      <dl class="facts">${facts}</dl>
+    </div>
+    <div class="next-side">
+      ${flyerBlock(ev)}
+      ${ev.ready
+        ? `<a class="action" href="${esc(ev.page)}">詳細とタイムテーブルを見る</a>`
+        : `<span class="action off">詳細ページは準備中です</span>`}
+    </div>`;
+}
+
+function renderArchive(){
+  const list = EVENTS.filter(e => e.status === "past");
+  const host = document.getElementById("archive");
+
+  if(list.length === 0){
+    host.innerHTML = `<p class="empty">過去の開催記録はまだありません。</p>`;
+    return;
+  }
+
+  host.innerHTML = list.map(ev => {
+    const meta = [ev.date, ev.venue].filter(Boolean).map(esc).join("<br>");
+    const inner = `
+      <div class="past-thumb" data-flyer>
+        <img src="${esc(ev.flyer)}" alt="">
+      </div>
+      <div>
+        <div class="past-title">${esc(titleOf(ev))}</div>
+        <div class="past-meta">${meta}</div>
+      </div>`;
+    return ev.ready
+      ? `<a class="past" href="${esc(ev.page)}">${inner}</a>`
+      : `<div class="past">${inner}</div>`;
+  }).join("");
+}
+
+/* 画像が無いときは、崩れずに空の枠として表示する */
+function guardImages(){
+  document.querySelectorAll("[data-flyer] img").forEach(img => {
+    img.addEventListener("error", () => {
+      img.style.display = "none";
+      img.closest("[data-flyer]").classList.add("is-empty");
+    });
+    if(img.complete && img.naturalWidth === 0) img.dispatchEvent(new Event("error"));
+  });
+}
+
+renderSite();
+renderNext();
+renderArchive();
+guardImages();
+</script>
+
+</body>
+</html>
