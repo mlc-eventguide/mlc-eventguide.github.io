@@ -132,6 +132,13 @@ a{color:inherit}
   letter-spacing:-.03em;
 }
 
+.sub{
+  font-family:var(--en);
+  font-size:clamp(17px,4.6vw,24px);
+  line-height:1.1;
+  letter-spacing:.01em;
+  margin-top:12px;
+}
 .date{
   font-family:var(--en);
   font-size:clamp(24px,7vw,40px);
@@ -330,6 +337,7 @@ const SITE = {
 
    name   : イベント名（例 "CAREES"）
    vol    : 回数。単発イベントで回数が無いときは null
+   sub    : Vol番号の下に出す1行（例：20th Anniversary）。無ければ省略してよい
    status : "upcoming"（次回開催） / "past"（過去回）
    date   : "2026.11.22" の形式。未定なら空 "" にする
    ready  : 詳細ページが公開済みなら true、まだなら false
@@ -339,16 +347,17 @@ const EVENTS = [
   {
     name: "CAREES",
     vol: 23,
+    sub: "20th Anniversary",
     status: "upcoming",
-    date: "",
-    day: "",
+    date: "2026.11.22",
+    day: "SUN",
     venue: "京橋 BERONICA",
-    open: "15:00",
+    open: "14:00",
     close: "22:00",
-    price: "",
+    price: "一般 ¥3,500／高校生以下 ¥2,500／小学生未満 無料（各1ドリンク付・当日精算）",
     flyer: "images/carees-23.jpg",
     page: "carees-23.html",
-    ready: false
+    ready: true
   },
   {
     name: "CAREES",
@@ -424,11 +433,13 @@ function renderNext(){
     ? `<div class="evt-name">${esc(ev.name)}</div>
        <div class="vol">Vol.${esc(ev.vol)}</div>`
     : `<div class="evt-name solo">${esc(ev.name)}</div>`;
+  const subLine = ev.sub ? `<div class="sub">${esc(ev.sub)}</div>` : "";
 
   host.innerHTML = `
     <div class="next-head">
       <span class="tag ${hasDate ? "" : "tbd"}">${hasDate ? "次回開催" : "次回開催 準備中"}</span>
       ${heading}
+      ${subLine}
       <div class="date ${hasDate ? "" : "unset"}">
         ${hasDate ? esc(ev.date) + (ev.day ? " " + esc(ev.day) : "") : "日程が決まり次第、ここに掲載します"}
       </div>
